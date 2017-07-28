@@ -14,6 +14,10 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                 @else
+                    <li class="nav-item"><a href="{{ route('series.index') }}" class="nav-link">Series</a></li>
+                    <li class="nav-item"><a href="{{ route('renungan-pagi.index') }}" class="nav-link">Renungan</a></li>
+                    <li class="nav-item"><a href="{{ url('/setting') }}" class="nav-link">Sekolah Sabat</a></li>
+                    <li class="nav-item"><a href="{{ url('/setting') }}" class="nav-link">Settings</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="javascript;" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           {{ Auth::user()->first_name }} <span class="caret"></span>

@@ -27,5 +27,15 @@ Route::get('renungan-pagi/{slug}', function () {
 	return view('rp.post');
 });
 
+
+Route::group(['prefix' => '/user'], function() {
+	Route::get('setting', function () {
+		return view('users.setting.index');
+	});
+	
+	Route::resource('/series', 'SerieController');
+	Route::resource('/renungan-pagi', 'RenunganPagiController');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/sekolah-sabat', 'HomeController@index')->name('home');
