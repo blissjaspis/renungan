@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Serie;
 use Illuminate\Http\Request;
+use App\Traits\UploadImage;
 
 class SerieController extends Controller
 {
+    use UploadImage;
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +17,7 @@ class SerieController extends Controller
      */
     public function index()
     {
-        return view('users.series.index');
+        return view('users.series.index', ['series' => Serie::get()]);
     }
 
     /**
@@ -35,7 +38,18 @@ class SerieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $book_cover = str_random(20).'.jpg';
+
+        Serie::create([
+            'title' => $request->title,
+            'author' => $request->author,
+            'year' => $request->year,
+            'book_cover' => $book_cover
+        ]);
+
+        $this->uploadSingleImage($request->file('book_cover'), $book_cover, "/workship/series/");
+
+        return redirect()->route('series.index')->withSuccess('Berhasil Membuat Serie Baru!');
     }
 
     /**

@@ -17,7 +17,7 @@ class CreateSeriesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('author', 100);
-            $table->date('date');
+            $table->string('year', 5);
             $table->string('book_cover');
             $table->softDeletes();
             $table->timestamps();

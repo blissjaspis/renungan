@@ -5,8 +5,10 @@
 	<div class="container mt-5">
 		<div class="row justify-content-md-center">
 			<div class="col-md-6">
-				<form action="#" method="post" enctype="">
+				<form action="{{ route('renungan-pagi.store') }}" method="post" enctype="multipart/form-data">
 				
+					{{ csrf_field() }}
+
 					<h3 class="h3 text-center mb-4 text-muted">Add new Morning Workship</h3>
 
 					<div class="form-group">
@@ -38,7 +40,7 @@
 
 					<hr>
 
-					<a href="#" class="btn btn-success btn-md">Submit</a>
+					<button type="Submit" class="btn btn-success btn-md">Submit</button>
 					<a href="#" class="btn btn-primary btn-md">Draft</a>
 					<a href="{{ route('renungan-pagi.index') }}" class="btn btn-secondary btn-md">Cancel</a>
 				</form>
@@ -47,3 +49,14 @@
 	</div>
 
 @endsection
+
+@push('scripts')
+  {{-- <script src="{{ asset('/vendor/tinymce/tinymce.min.js') }}"></script> --}}
+  {{-- <script>tinymce.init({ selector:'textarea' });</script> --}}
+	<link rel="stylesheet" href="{{ asset('/vendor/simplemde/simplemde.min.css') }}">
+	<script src="{{ asset('/vendor/simplemde/simplemde.min.js') }}"></script>
+
+	<script>
+		var simplemde = new SimpleMDE();
+	</script>
+@endpush

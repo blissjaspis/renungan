@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use GrahamCampbell\Markdown\Facades\Markdown;
 use App\Models\RenunganPagi;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,8 @@ class RenunganPagiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo Markdown::convertToHtml($request->content);
+        // dd($request->request);
     }
 
     /**

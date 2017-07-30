@@ -7,7 +7,7 @@
 			<div class="card">
 			<img src="https://getmdl.io/templates/blog/images/road_big.jpg" alt="" style="height: 280px;" class="img-responsive">
 
-			<audio controls class="embed-responsive embed-responsive-16by9">
+			<audio controls class="embed-responsive embed-responsive-16by9" preload="none">
 				<source src="{{ asset('25-07-2017.mp3') }}" type="audio/mpeg">
 			</audio>
 

@@ -6,10 +6,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/test', function () {
-	return view('test');
-});
-
 Route::get('privacy', function () {
 	return view('sources.privacy');
 });
