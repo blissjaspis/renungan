@@ -37,27 +37,6 @@
 									<td colspan="5" class="text-center">Belum Ada Data!</td>
 								</tr>
 							@endforelse
-								{{-- <tr>
-									<th scope="row">1</th>
-									<td><img src="{{ asset('me.jpg') }}" alt="" class="thumbnail" style="height: 5rem;"></td>
-									<td><a href="#">Kekuasaan Dipulihkan</a></td>
-									<td>2017</td>
-									<td>Calvin B Rock</td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td><img src="{{ asset('me.jpg') }}" alt="" class="thumbnail" style="height: 5rem;"></td>
-									<td><a href="#">Keadaan Buruk Adam Kedua</a></td>
-									<td>2017</td>
-									<td>Calvin B Rock</td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td><img src="{{ asset('me.jpg') }}" alt="" class="thumbnail" style="height: 5rem;"></td>
-									<td><a href="">Harapan bagi Umat Manusia</a></td>
-									<td>2017</td>
-									<td>Calvin B Rock</td>
-								</tr> --}}
 							</tbody>
 						</table>
 
