@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use GrahamCampbell\Markdown\Facades\Markdown;
-use App\Models\RenunganPagi;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
-class RenunganPagiController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class RenunganPagiController extends Controller
      */
     public function index()
     {
-        return view('admin.renungan_pagi.index');
+        return view('admin.blog.index');
     }
 
     /**
@@ -25,7 +24,7 @@ class RenunganPagiController extends Controller
      */
     public function create()
     {
-        return view('admin.renungan_pagi.create');
+        return view('admin.blog.create');
     }
 
     /**
@@ -36,17 +35,16 @@ class RenunganPagiController extends Controller
      */
     public function store(Request $request)
     {
-        echo Markdown::convertToHtml($request->content);
-        // dd($request->request);
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\RenunganPagi  $renunganPagi
+     * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(RenunganPagi $renunganPagi)
+    public function show(Blog $blog)
     {
         //
     }
@@ -54,10 +52,10 @@ class RenunganPagiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\RenunganPagi  $renunganPagi
+     * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function edit(RenunganPagi $renunganPagi)
+    public function edit(Blog $blog)
     {
         //
     }
@@ -66,10 +64,10 @@ class RenunganPagiController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\RenunganPagi  $renunganPagi
+     * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RenunganPagi $renunganPagi)
+    public function update(Request $request, Blog $blog)
     {
         //
     }
@@ -77,10 +75,10 @@ class RenunganPagiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\RenunganPagi  $renunganPagi
+     * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RenunganPagi $renunganPagi)
+    public function destroy(Blog $blog)
     {
         //
     }

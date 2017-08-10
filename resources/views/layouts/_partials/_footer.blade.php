@@ -6,7 +6,7 @@
                     <h6>ABOUT</h6>
                     <ul class="list-unstyled link-footer">
                         <li>
-                           We’ve been working on Go Analytics for the better part of a decade and are super proud of what we’ve created. If you’d like to learn more, or are interested in a job, contact us anytime at
+                           Blog pribadi yang dikelola untuk mengisi suntuk!
                         </li>
                     </ul>
                     </p>
@@ -21,10 +21,13 @@
                 <div class="col-md-2">
                     <h6>CONTACT</h6>
                     <ul class="list-unstyled link-footer">
-                        <li><a href="mailto:bliss@jaspis.me">Mail Us</a></li>
+                        <li><a href="mailto:bliss@jaspis.me">Mail Me!</a></li>
+                        <li><a href="https://bliss.jaspis.me">About Me!</a></li>
                     </ul>
                 </div>
             </div>
+            <hr>
+            <p class="copyright text-muted">Copyright &copy; Bliss Jaspis 2017</p>
         </div>
     </div>
 </footer>

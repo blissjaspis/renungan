@@ -1,15 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="jumbotron">
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ asset('home.jpg') }}')">
     <div class="container">
-        <h1 class="display-3">Selamat Datang!</h1>
-        <p class="lead">Ini adalah tempat berita harian renungan pagi dan sore Gereja Masehi Advent Hari ke-7.</p>
-        <hr class="my-4">
-        <p>Silahkan Daftar untuk ikut berinteraksi dalam situs ini.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                <div class="site-heading">
+                    <h1>Welcome!</h1>
+                    <hr class="small">
+                    <span class="subheading">Blog pribadi yang ingin memberikan sesuatu!</span>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</header>
 @endsection

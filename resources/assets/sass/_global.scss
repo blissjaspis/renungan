@@ -1,0 +1,105 @@
+// Global styling for this template
+body {
+    font-size: 20px;
+    color: $gray-dark;
+    @include serif-font;
+}
+
+p {
+    line-height: 1.5;
+    margin: 30px 0;
+    a {
+        text-decoration: underline;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    @include sans-serif-font;
+}
+
+a {
+    color: $gray-dark;
+    @include transition-all;
+    &:hover,
+    &:focus {
+        color: $theme-primary;
+    }
+}
+
+a img {
+    &:hover,
+    &:focus {
+        cursor: zoom-in;
+    }
+}
+
+blockquote {
+    font-style: italic;
+    color: $gray-light;
+}
+
+.section-heading {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 60px;
+}
+
+.caption {
+    font-size: 14px;
+    font-style: italic;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+::-moz-selection {
+    color: white;
+    background: $theme-primary;
+    text-shadow: none;
+}
+
+::selection {
+    color: white;
+    background: $theme-primary;
+    text-shadow: none;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+body {
+    -webkit-tap-highlight-color: $theme-primary;
+}
+
+hr.small {
+    max-width: 100px;
+    margin: 15px auto;
+    border-width: 4px;
+    border-color: #fff;
+}
+
+.header-section {
+    background-color: #d0cfc0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='40' viewBox='0 0 50 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23aea7ba' fill-opacity='0.43'%3E%3Cpath d='M40 10L36.67 0h-2.11l3.33 10H20l-2.28 6.84L12.11 0H10l6.67 20H10l-2.28 6.84L2.11 10 5.44 0h-2.1L0 10l6.67 20-3.34 10h2.11l2.28-6.84L10 40h20l2.28-6.84L34.56 40h2.1l-3.33-10H40l2.28-6.84L47.89 40H50l-6.67-20L50 0h-2.1l-5.62 16.84L40 10zm1.23 10l-2.28-6.84L34 28h4.56l2.67-8zm-10.67 8l-2-6h-9.12l2 6h9.12zm-12.84-4.84L12.77 38h15.79l2.67-8H20l-2.28-6.84zM18.77 20H30l2.28 6.84L37.23 12H21.44l-2.67 8zm-7.33 2H16l-4.95 14.84L8.77 30l2.67-8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    box-shadow: -1px 2px 3px #b9b9b9;
+
+    &__margin {
+        margin: 5.5rem;
+    }
+}

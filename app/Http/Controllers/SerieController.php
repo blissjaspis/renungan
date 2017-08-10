@@ -17,7 +17,7 @@ class SerieController extends Controller
      */
     public function index()
     {
-        return view('users.series.index', ['series' => Serie::get()]);
+        return view('admin.series.index', ['series' => Serie::get()]);
     }
 
     /**
@@ -27,7 +27,7 @@ class SerieController extends Controller
      */
     public function create()
     {
-        return view('users.series.create');
+        return view('admin.series.create');
     }
 
     /**
@@ -49,7 +49,7 @@ class SerieController extends Controller
 
         $this->uploadSingleImage($request->file('book_cover'), $book_cover, "/workship/series/");
 
-        return redirect()->route('series.index')->withSuccess('Berhasil Membuat Serie Baru!');
+        return redirect()->route('admin.series.index')->withSuccess('Berhasil Membuat Serie Baru!');
     }
 
     /**
@@ -60,7 +60,7 @@ class SerieController extends Controller
      */
     public function show(Serie $serie)
     {
-        return view('users.series.show');
+        return view('admin.series.show');
     }
 
     /**
@@ -71,7 +71,7 @@ class SerieController extends Controller
      */
     public function edit(Serie $serie)
     {
-        return view('users.series.edit');
+        return view('admin.series.edit');
     }
 
     /**

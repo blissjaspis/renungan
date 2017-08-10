@@ -1,23 +1,32 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
     <div class="container">
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu <i class="fa fa-bars"></i>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarToggler">
-            <a class="navbar-brand mr-auto" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <ul class="navbar-nav">
+        <a class="navbar-brand" href="{{ url('/') }}">Bliss Jaspis</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Advent <span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Series</a>
+                        <a class="dropdown-item" href="{{ url('/renungan-pagi') }}">Renungan Pagi</a>
+                    </div>
+                </li>
                 @if (Auth::guest())
-                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    </li>
                 @else
-                    <li class="nav-item"><a href="{{ route('series.index') }}" class="nav-link">Series</a></li>
-                    <li class="nav-item"><a href="{{ route('renungan-pagi.index') }}" class="nav-link">Renungan</a></li>
-                    <li class="nav-item"><a href="{{ url('/setting') }}" class="nav-link">Sekolah Sabat</a></li>
-                    <li class="nav-item"><a href="{{ url('/setting') }}" class="nav-link">Settings</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="javascript;" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           {{ Auth::user()->first_name }} <span class="caret"></span>
