@@ -9,7 +9,7 @@
 <div class="container mt-5">
 		<div class="row justify-content-md-center">
 			<div class="col-md-6">
-				<form action="{{ route('renungan-pagi.store') }}" method="post" enctype="multipart/form-data">
+				<form action="{{ route('admin.renungan-pagi.store') }}" method="post" enctype="multipart/form-data">
 				
 					{{ csrf_field() }}
 

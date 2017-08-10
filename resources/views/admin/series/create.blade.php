@@ -9,7 +9,7 @@
 <div class="container mt-5">
 	<div class="row justify-content-md-center">
 		<div class="col-md-6">
-			<form action="{{ route('series.store') }}" method="post" enctype="multipart/form-data" role="form">
+			<form action="{{ route('admin.series.store') }}" method="post" enctype="multipart/form-data" role="form">
 
 				{{ csrf_field() }}
 			

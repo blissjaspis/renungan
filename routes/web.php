@@ -36,7 +36,7 @@ Route::get('renungan-pagi/{slug}', function () {
 	return view('public.rp.post');
 });
 
-Route::group(['prefix' => '/admin'], function () {
+Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
 	Route::name('admin.dashboard')->get('/dashboard', function () {
 		return view('admin.index');
 	});

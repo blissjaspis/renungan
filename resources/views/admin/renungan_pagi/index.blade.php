@@ -22,7 +22,7 @@
 				    	<i aria="true" class="fa fa-home"> Dashboard</i>
 				  	</a>
 				  	<a href="{{ route('admin.renungan-pagi.index') }}" class="list-group-item active"><i aria="true" class="fa fa-heart"> Renungan</i></a>
-				  	<a href="{{ url('/user/series') }}" class="list-group-item list-group-item-action"><i aria="true" class="fa fa-bars"> Series</i></a>
+				  	<a href="{{ route('admin.series.index') }}" class="list-group-item list-group-item-action"><i aria="true" class="fa fa-bars"> Series</i></a>
 				  	<a href="{{ route('admin.blog.index') }}" class="list-group-item list-group-item-action"><i aria="true" class="fa fa-newspaper-o"> Blog</i></a>
 				  	<a href="#" class="list-group-item list-group-item-action"><i aria="true" class="fa fa-user-circle-o"> Export Data</i></a>
 				</div>
